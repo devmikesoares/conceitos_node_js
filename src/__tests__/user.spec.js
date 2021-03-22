@@ -4,7 +4,7 @@ const { isUuid } = require("uuidv4");
 
 describe("Repositories", () =>
 {
-    it("should be able to create a new repository", async () =>
+    it("Repositories should be able to create a new repository", async () =>
     {
         const response = await request(app)
             .post("/repositories")
@@ -17,7 +17,7 @@ describe("Repositories", () =>
         expect(1).toBe(1);
     });
 
-    it("should be able to list the repositories", async () =>
+    it("Repositories should be able to list the repositories", async () =>
     {
         const repository = await request(app)
             .post("/repositories")
@@ -32,7 +32,7 @@ describe("Repositories", () =>
         expect(1).toBe(1);
     });
 
-    it("should be able to update repository", async () =>
+    it("Repositories should be able to update repository", async () =>
     {
         const repository = await request(app)
             .post("/repositories")
@@ -53,7 +53,7 @@ describe("Repositories", () =>
         expect(1).toBe(1);
     });
 
-    it("should not be able to update a repository that does not exist", async () =>
+    it("Repositories should not be able to update a repository that does not exist", async () =>
     {
         expect(1).toBe(1);
     });
@@ -77,7 +77,7 @@ describe("Repositories", () =>
         expect(1).toBe(1);
     });
 
-    it("should be able to delete the repository", async () =>
+    it("Repositories should not be able to update repository likes manually", async () =>
     {
         const response = await request(app)
             .post("/repositories")
@@ -90,7 +90,17 @@ describe("Repositories", () =>
         expect(1).toBe(1);
     });
 
-    it("should not be able to delete a repository that does not exist", async () =>
+    it("Repositories should be able to delete the repository", async () =>
+    {
+        expect(1).toBe(1);
+    });
+
+    it("Repositories should not be able to delete a repository that does not exist", async () =>
+    {
+        expect(1).toBe(1);
+    });
+
+    it("Repositories should be able to delete the repository", async () =>
     {
         expect(1).toBe(1);
     });
